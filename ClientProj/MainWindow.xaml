@@ -1,0 +1,29 @@
+﻿<Window x:Class="ClientProj.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientProj"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="445" Stroke="Black" VerticalAlignment="Top" Width="800" Fill="Gray" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="100,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.241,0.175" Height="18" />
+        <TextBox HorizontalAlignment="Left" Margin="85,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="18"/>
+        <TextBox Name="localName" HorizontalAlignment="Left" Margin="342,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" Grid.Column="1" Height="18"/>
+        <CheckBox Content="Use Encryption" HorizontalAlignment="Left" Margin="342,64,0,0" VerticalAlignment="Top" Grid.Column="1" Height="20" Width="151"/>
+        <Label Content="Messages From:" HorizontalAlignment="Left" Margin="302,136,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.222,-0.574" Width="150" Grid.Column="1" Height="26"/>
+        <Button Content="Send Message" HorizontalAlignment="Left" Margin="302,386,0,0" VerticalAlignment="Top" Width="191" Grid.Column="1" Height="20" Click="sendMessageButton_Click"/>
+        <TextBox Name="messageText" HorizontalAlignment="Left" Margin="82,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="485" Grid.ColumnSpan="2" Height="18"/>
+        <Label Content="Message:" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Width="94" Height="26"/>
+        <Label Content="Server IP:&#xD;&#xA;" HorizontalAlignment="Left" Margin="40,27,0,0" VerticalAlignment="Top" Width="84" Height="26"/>
+        <Label Content="Port:" HorizontalAlignment="Left" Margin="52,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.236,0.894" Width="33" Grid.Column="1" Height="26"/>
+        <Label Content="Local Name:" Grid.Column="1" HorizontalAlignment="Left" Margin="255,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.335,0.026" Width="82" Height="26"/>
+        <TextBox Name="chatbox" HorizontalAlignment="Left" Margin="20,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="547" Grid.ColumnSpan="2" Height="314"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="302,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" Height="211"/>
+    </Grid>
+</Window>
