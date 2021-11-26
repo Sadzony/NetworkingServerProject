@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace NetworkingServerProject
+namespace ClientProject
 {
     class Program
     {

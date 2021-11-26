@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f7oe/eHVgsHiozoV/ufhEYual5alHOnm/MO+oXY6kZWy98lTEDWkJgx1TIADlHCk0YhhX2A/qnejxkTcQ8lU6A==",
+  "dgSpecHash": "mWKcMiDUG8WCg6pGQfgBx33vP7YFTESsSysb/9vPmYtXBWv6zHwFQAc57jExthyuo979y+Ra67DdqK+1p8nUGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\s011308k\\Documents\\NetworkingServerProject\\ClientProject\\ClientProject.csproj",
+  "projectFilePath": "C:\\Users\\szymo\\Programming\\networking\\NetworkingServerProject\\ClientProject\\Server.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

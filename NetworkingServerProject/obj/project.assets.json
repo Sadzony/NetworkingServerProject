@@ -8,25 +8,25 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\s011308k\\.nuget\\packages\\": {},
+    "C:\\Users\\szymo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\s011308k\\Documents\\NetworkingServerProject\\NetworkingServerProject\\NetworkingServerProject.csproj",
-      "projectName": "NetworkingServerProject",
-      "projectPath": "C:\\Users\\s011308k\\Documents\\NetworkingServerProject\\NetworkingServerProject\\NetworkingServerProject.csproj",
-      "packagesPath": "C:\\Users\\s011308k\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\s011308k\\Documents\\NetworkingServerProject\\NetworkingServerProject\\obj\\",
+      "projectUniqueName": "C:\\Users\\szymo\\Programming\\networking\\NetworkingServerProject\\NetworkingServerProject\\Client.csproj",
+      "projectName": "Client",
+      "projectPath": "C:\\Users\\szymo\\Programming\\networking\\NetworkingServerProject\\NetworkingServerProject\\Client.csproj",
+      "packagesPath": "C:\\Users\\szymo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\szymo\\Programming\\networking\\NetworkingServerProject\\NetworkingServerProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\s011308k\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\szymo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -68,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

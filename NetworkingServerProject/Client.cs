@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Net;
 using System.IO;
-
-namespace NetworkingServerProject
+using System.Windows;
+namespace ClientProject
 {
     class Client
     {
@@ -55,7 +55,6 @@ namespace NetworkingServerProject
         {
             Console.WriteLine("Server says: " + reader.ReadLine());
             Console.WriteLine();
-
         }
     }
 }
