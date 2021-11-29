@@ -18,3 +18,7 @@ C:\Users\szymo\Programming\networking\NetworkingServerProject\ClientProj\obj\Deb
 C:\Users\szymo\Programming\networking\NetworkingServerProject\ClientProj\obj\Debug\net5.0-windows7.0\ref\ClientProj.dll
 C:\Users\szymo\Programming\networking\NetworkingServerProject\ClientProj\obj\Debug\net5.0-windows7.0\ClientProj.pdb
 C:\Users\szymo\Programming\networking\NetworkingServerProject\ClientProj\obj\Debug\net5.0-windows7.0\ClientProj.genruntimeconfig.cache
+C:\Users\szymo\Programming\networking\NetworkingServerProject\ClientProj\obj\Debug\net5.0-windows7.0\ClientProj.csproj.AssemblyReference.cache
+C:\Users\szymo\Programming\networking\NetworkingServerProject\ClientProj\bin\Debug\net5.0-windows7.0\Packets.dll
+C:\Users\szymo\Programming\networking\NetworkingServerProject\ClientProj\bin\Debug\net5.0-windows7.0\Packets.pdb
+C:\Users\szymo\Programming\networking\NetworkingServerProject\ClientProj\obj\Debug\net5.0-windows7.0\ClientProj.csproj.CopyComplete

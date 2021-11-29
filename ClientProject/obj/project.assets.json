@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Packets/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Packets.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Packets.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Packets/1.0.0": {
+      "type": "project",
+      "path": "../Packets/Packets.csproj",
+      "msbuildProject": "../Packets/Packets.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Packets >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\szymo\\.nuget\\packages\\": {},
@@ -41,7 +60,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\szymo\\Programming\\networking\\NetworkingServerProject\\Packets\\Packets.csproj": {
+              "projectPath": "C:\\Users\\szymo\\Programming\\networking\\NetworkingServerProject\\Packets\\Packets.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

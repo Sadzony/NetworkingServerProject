@@ -7,27 +7,32 @@ using System.Net.Sockets;
 using System.Net;
 using System.IO;
 using System.Windows;
-
+using System.Threading;
+using System.Runtime.Serialization.Formatters.Binary;
 namespace ClientProj
 {
     public class Client
     {
         private TcpClient m_tcpClient;
         private NetworkStream stream;
-        private StreamWriter writer;
-        private StreamReader reader;
+        private BinaryWriter m_writer;
+        private BinaryReader m_reader;
+        private MainWindow m_form;
+        private BinaryFormatter m_formatter;
         public Client()
         {
             m_tcpClient = new TcpClient();
         }
+        
         public bool Connect(string ipAddress, int port)
         {
             try
             {
                 m_tcpClient.Connect(ipAddress, port);
                 stream = m_tcpClient.GetStream();
-                reader = new StreamReader(stream, Encoding.UTF8);
-                writer = new StreamWriter(stream, Encoding.UTF8);
+                m_reader = new BinaryReader(stream, Encoding.UTF8);
+                m_writer = new BinaryWriter(stream, Encoding.UTF8);
+                m_formatter = new BinaryFormatter();
                 return true;
             }
             catch(Exception e)
@@ -38,24 +43,32 @@ namespace ClientProj
         }
         public void Run()
         {
-            string userInput;
-            ProcessServerResponse();
-            while((userInput = Console.ReadLine()) != null)
-            {
-                writer.WriteLine(userInput);
-                writer.Flush();
-                ProcessServerResponse();
-                if(userInput == "exit")
-                {
-                    break;
-                }
-            }
-            m_tcpClient.Close();
+            m_form = new MainWindow(this);
+            Thread thread = new Thread(() => { ProcessServerResponse(); });
+            m_form.ShowDialog();
         }
-        private void ProcessServerResponse()
+        public void SendMessage(Packets.Packet packet)
         {
-            Console.WriteLine("Server says: " + reader.ReadLine());
-            Console.WriteLine();
+            MemoryStream memoryStream = new MemoryStream();
+            m_formatter.Serialize(memoryStream, packet);
+            byte[] buffer = memoryStream.GetBuffer();
+            m_writer.Write(buffer.Length);
+            m_writer.Write(buffer);
+            m_writer.Flush();
+        }
+        private Packets.Packet ProcessServerResponse()
+        {
+            int numberOfBytes;
+            if ((numberOfBytes = m_reader.ReadInt32()) != -1)
+            {
+                byte[] buffer = m_reader.ReadBytes(numberOfBytes);
+                MemoryStream memoryStream = new MemoryStream(buffer);
+                return m_formatter.Deserialize(memoryStream) as Packets.Packet;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

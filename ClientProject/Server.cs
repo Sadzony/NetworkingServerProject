@@ -40,6 +40,14 @@ namespace ServerProject
                     Thread thread = new Thread(() => { ClientMethod(index); });
                     thread.Start();
                 }
+                else
+                {
+                    Socket socket = m_tcpListener.AcceptSocket();
+                    Console.WriteLine("Connection made. Server is full");
+                    ConnectedClient new_client = new ConnectedClient(socket);
+                    new_client.Close();
+                    Console.WriteLine("Client Disconnected.");
+                }
             }
         }
         public void Stop()
@@ -49,18 +57,23 @@ namespace ServerProject
         }
         private void ClientMethod(int index)
         {
-            string receivedMessage;
+            Packets.Packet receivedMessage;
 
-
-            m_clients[index].Send("You have connected to the server - send 0 for valid options");
             while((receivedMessage = m_clients[index].Read()) != null)
             {
-                m_clients[index].Send(GetReturnMessage(receivedMessage));
-                Console.WriteLine("Received message!");
-                if (GetReturnMessage(receivedMessage) == "bye")
+                switch (receivedMessage.GetPacketType())
                 {
-                    break;
+                    case Packets.PacketType.ChatMessage:
+                        Console.WriteLine("Received message!");
+                        Packets.ChatMessagePacket chatPacket = (Packets.ChatMessagePacket)receivedMessage;
+                        m_clients[index].Send(new Packets.ChatMessagePacket(chatPacket.message));
+                        break;
+                    case Packets.PacketType.ClientName:
+                        break;
+                    case Packets.PacketType.PrivateMessage:
+                        break;
                 }
+                
 
             }
             m_clients[index].Close();
@@ -69,15 +82,6 @@ namespace ServerProject
             clientIndex--;
             Console.WriteLine("Client Disconnected.");
 
-        }
-        private string GetReturnMessage(string code)
-        {
-            if(code == "exit")
-            {
-                return "bye";
-                
-            }
-            return "i hear you!";
         }
     }
 }

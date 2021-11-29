@@ -22,9 +22,19 @@ namespace ClientProj
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Client m_client;
+        public void UpdateChatBox(string message)
+        {
+            chatbox.Dispatcher.Invoke(() =>
+            {
+                chatbox.Text += message + Environment.NewLine;
+                chatbox.ScrollToEnd();
+            });
+        }
         public MainWindow(Client client)
         {
             InitializeComponent();
+            m_client = client;
         }
         private void sendMessageButton_Click(object sender, RoutedEventArgs e)
         {
@@ -43,20 +53,12 @@ namespace ClientProj
                 }
                 else
                 {
-                    string name = localName.Text;
-                    message = name + " says: " + message + "\n";
-                    ThreadStart ButtonThread = delegate ()
-                    {
-                        Dispatcher.Invoke(DispatcherPriority.Normal, new Action<string>(SendMessage), message);
-                    };
-                    new Thread(ButtonThread).Start();
-
+                    Packets.ChatMessagePacket chatPacket = new Packets.ChatMessagePacket(message);
+                    m_client.SendMessage(chatPacket);
+                    UpdateChatBox(message);
                 }
             }
         }
-        private void SendMessage(string status)
-        {
-            chatbox.Text = status;
-        }
+
     }
 }
