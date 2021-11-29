@@ -1,4 +1,4 @@
-﻿/*
+﻿
 using System;
 
 
@@ -21,4 +21,3 @@ namespace ClientProj
         }
     }
 }
-*/

@@ -40,7 +40,7 @@
       },
       "frameworks": {
         "net5.0-windows7.0": {
-          "targetAlias": "net5.0-windows",
+          "targetAlias": "net5.0-windows7.0",
           "projectReferences": {}
         }
       },
@@ -52,7 +52,7 @@
     },
     "frameworks": {
       "net5.0-windows7.0": {
-        "targetAlias": "net5.0-windows",
+        "targetAlias": "net5.0-windows7.0",
         "imports": [
           "net461",
           "net462",

@@ -10,7 +10,7 @@ using System.Windows;
 
 namespace ClientProj
 {
-    class Client
+    public class Client
     {
         private TcpClient m_tcpClient;
         private NetworkStream stream;

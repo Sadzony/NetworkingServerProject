@@ -22,7 +22,7 @@ namespace ClientProj
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(Client client)
         {
             InitializeComponent();
         }
