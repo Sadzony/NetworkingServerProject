@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Net;
 namespace Packets
 {
     public enum PacketType
     {
         ChatMessage,
         PrivateMessage,
-        ClientName
+        ClientName,
+        Login
     }
     [Serializable()]
     public class Packet
@@ -28,6 +30,16 @@ namespace Packets
         {
             message = p_message;
             SetType(PacketType.ChatMessage);
+        }
+    }
+    public class LoginPacket : Packet
+    {
+        public IPEndPoint mEndPoint;
+        public LoginPacket(IPEndPoint pEndPoint)
+        {
+            mEndPoint = pEndPoint;
+            SetType(PacketType.Login);
+
         }
     }
 }

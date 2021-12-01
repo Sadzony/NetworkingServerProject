@@ -10,3 +10,15 @@ C:\Users\szymo\Programming\networking\NetworkingServerProject\Packets\obj\Debug\
 C:\Users\szymo\Programming\networking\NetworkingServerProject\Packets\obj\Debug\net5.0\Packets.dll
 C:\Users\szymo\Programming\networking\NetworkingServerProject\Packets\obj\Debug\net5.0\ref\Packets.dll
 C:\Users\szymo\Programming\networking\NetworkingServerProject\Packets\obj\Debug\net5.0\Packets.pdb
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\bin\Debug\net5.0\Packets.deps.json
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\bin\Debug\net5.0\Packets.dll
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\bin\Debug\net5.0\ref\Packets.dll
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\bin\Debug\net5.0\Packets.pdb
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\obj\Debug\net5.0\Packets.csprojAssemblyReference.cache
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\obj\Debug\net5.0\Packets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\obj\Debug\net5.0\Packets.AssemblyInfoInputs.cache
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\obj\Debug\net5.0\Packets.AssemblyInfo.cs
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\obj\Debug\net5.0\Packets.csproj.CoreCompileInputs.cache
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\obj\Debug\net5.0\Packets.dll
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\obj\Debug\net5.0\ref\Packets.dll
+C:\Users\s011308k\Documents\NetworkingServerProject\Packets\obj\Debug\net5.0\Packets.pdb

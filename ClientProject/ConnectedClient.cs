@@ -19,6 +19,7 @@ namespace ServerProject
         private object m_readLock;
         private object m_writeLock;
         public string m_name;
+        public IPEndPoint m_EndPoint;
         public ConnectedClient(Socket p_socket)
         {
             m_writeLock = new object();
@@ -37,7 +38,7 @@ namespace ServerProject
             m_stream.Close();
             m_socket.Close();
         }
-        public Packets.Packet Read() //read from client side
+        public Packets.Packet Read_tcp() //read from client side
         {
             lock (m_readLock)
             {
@@ -55,7 +56,7 @@ namespace ServerProject
             }
 
         }
-        public void Send(Packets.Packet packet) //send message to client side
+        public void Send_tcp(Packets.Packet packet) //send message to client side
         {
             lock (m_writeLock)
             {

@@ -54,7 +54,7 @@ namespace ClientProj
                 else
                 {
                     Packets.ChatMessagePacket chatPacket = new Packets.ChatMessagePacket(message);
-                    m_client.SendMessage(chatPacket);
+                    m_client.SendMessage_tcp(chatPacket);
                     UpdateChatBox(message);
                 }
             }
